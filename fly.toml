@@ -1,0 +1,19 @@
+app = "gmailextension"
+
+[build]
+  builder = "heroku/buildpacks:18"  # 对 PHP 使用合适的 buildpack（如果你选择了不同的方案）
+
+[env]
+  # 你可以在这里设置任何环境变量
+
+[[services]]
+  internal_port = 80
+  protocol = "tcp"
+
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "requests"
+
+  [[services.ports]]
+    port = 80
