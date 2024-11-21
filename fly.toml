@@ -1,4 +1,4 @@
-app = "gmailextension"  # Set your app name here
+app = "fly-ryeizg"  # Set your app name here
 [build]
   dockerfile = "Dockerfile"  # 使用 Dockerfile 构建
 
